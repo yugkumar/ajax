@@ -122,7 +122,7 @@
 
 
 
-
+ $("#yesbtn").click(function(){
 $.ajax({
     type: 'POST',
     url: 'http://livequiz.hopto.org/poll/pollserver.php',
@@ -135,7 +135,7 @@ $.ajax({
     error: function (responseData, textStatus, errorThrown) {
         alert('POST failed.');
     }
-});
+});};
 
 
     /* var video = document.querySelector("#videoElement");
