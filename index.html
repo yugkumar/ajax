@@ -106,7 +106,7 @@
         var inputVal1 = document.getElementById("name").value;
         var inputVal2 = document.getElementById("batch").value;
         var inputVal3 = document.getElementById("birthday").value;
-        $.post("pollserver.php", {
+        $.post("http://livequiz.hopto.org/poll/pollserver.php", {
             answer: "yes",
             name: inputVal1,
             batch: inputVal2,
@@ -128,7 +128,7 @@
         var inputVal1 = document.getElementById("name").value;
         var inputVal2 = document.getElementById("batch").value;
         var inputVal3 = document.getElementById("birthday").value;
-        $.post("http//livequiz.hopto.org/poll/pollserver.php", {
+        $.post("http://livequiz.hopto.org/poll/pollserver.php", {
             answer: "no",
             name: inputVal1,
             batch: inputVal2,
