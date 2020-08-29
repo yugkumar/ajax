@@ -123,21 +123,19 @@
 
 
 
-
-    $("#nobtn").click(function() {
-        var inputVal1 = document.getElementById("name").value;
-        var inputVal2 = document.getElementById("batch").value;
-        var inputVal3 = document.getElementById("birthday").value;
-        $.post("http://livequiz.hopto.org/poll/pollserver.php", {
-            answer: "no",
-            name: inputVal1,
-            batch: inputVal2,
-            date: inputVal3
-        }, function(result) {
-            document.getElementById("span").innerHTML = result;
-            $("#buttonview").hide();
-        });
-    });
+$.ajax({
+    type: 'POST',
+    url: 'http://livequiz.hopto.org/poll/pollserver.php',
+    crossDomain: true,
+    data: '{"some":"json"}',
+    dataType: 'json',
+    success: function(responseData, textStatus, jqXHR) {
+        var value = responseData.someKey;
+    },
+    error: function (responseData, textStatus, errorThrown) {
+        alert('POST failed.');
+    }
+});
 
 
     /* var video = document.querySelector("#videoElement");
